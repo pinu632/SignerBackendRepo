@@ -178,3 +178,24 @@ export const getDocumnetAssignedToUser = async (req, res) => {
     return res.status(500).json({ success: false, message: "Internal server error" });
   }
 };
+
+export const getFileUrlFromQuery = async (req, res) => {
+  try {
+    const docId = req.query.id;
+
+    if (!docId) {
+      return res.status(400).json({ error: 'Missing document ID in query' });
+    }
+
+    const document = await Document.findById(docId).select('fileUrl');
+
+    if (!document) {
+      return res.status(404).json({ error: 'Document not found' });
+    }
+
+    res.json({ fileUrl: document.fileUrl });
+  } catch (error) {
+    console.error(`Error fetching fileUrl for docId ${req.query.id}:`, error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+};
