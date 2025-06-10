@@ -1,0 +1,47 @@
+# Node.js dependencies (if applicable, e.g., Node.js backend)
+node_modules/
+
+# Python virtual environment (if applicable)
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyd
+*.so
+
+# Java build output (if applicable, e.g., Spring Boot)
+/target/
+/build/
+*.jar
+*.war
+*.class
+
+# Logs
+*.log
+logs/
+*.sqlite
+*.db
+
+
+
+# Compiled files and binaries
+*.o
+*.a
+*.exe
+*.dll
+*.so
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+.DS_Store # macOS specific
+
+# Miscellaneous
+tmp/
+*.pid
+*.sock
+.DS_Store
+.nyc_output/
+/coverage
