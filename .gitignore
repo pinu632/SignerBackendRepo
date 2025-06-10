@@ -23,7 +23,11 @@ logs/
 *.sqlite
 *.db
 
-
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
 
 # Compiled files and binaries
 *.o
