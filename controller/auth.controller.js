@@ -42,7 +42,7 @@ export const GoogleCallback = async (req, res) => {
     // return res.status(200).json({ success: true, message: "Authenticated", token });
 
     // Redirect to frontend
-    return res.redirect('http://localhost:5173/');
+    return res.redirect('https://signer-frontend.vercel.app/');
   } catch (error) {
     console.error("Google OAuth Error:", error.message);
     return res.status(500).json({ success: false, message: "Internal Server Error" });
